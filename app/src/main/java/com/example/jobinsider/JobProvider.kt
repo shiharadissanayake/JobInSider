@@ -46,6 +46,13 @@ class JobProvider : AppCompatActivity() {
 
         }
 
+        binding.deleteJobButton.setOnClickListener {
+
+            val intent = Intent(this, DeleteJob::class.java)
+            startActivity(intent)
+
+        }
+
 
 
 

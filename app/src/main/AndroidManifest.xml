@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JobInSider"
         tools:targetApi="31">
-
+        <activity
+            android:name=".DeleteJob"
+            android:exported="false" />
         <activity
             android:name=".UpdateJobs"
             android:exported="false" />
