@@ -39,6 +39,15 @@ class JobProvider : AppCompatActivity() {
             startActivity(intent)
         })
 
+        binding.updateJobButton.setOnClickListener {
+
+            val intent = Intent(this, UpdateJobs::class.java)
+            startActivity(intent)
+
+        }
+
+
+
 
 
     }
@@ -62,6 +71,8 @@ class JobProvider : AppCompatActivity() {
                     }
 
                     jobRecyclerview.adapter = MyAdapter(jobArrayList)
+
+
 
 
                 }

@@ -11,7 +11,7 @@ class MyAdapter(private val jobList : ArrayList<JobData>) : RecyclerView.Adapter
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.job_list,
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.activity_job_list,
             parent,false)
         return MyViewHolder(itemView)
 
