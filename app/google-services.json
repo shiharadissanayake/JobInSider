@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "539758962087",
+    "project_id": "jobinsider-5168d",
+    "storage_bucket": "jobinsider-5168d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539758962087:android:37843fb68e2a0e4e074282",
+        "android_client_info": {
+          "package_name": "com.example.jobinsider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "539758962087-jnu813nehj9v989k12hom22houoe4n0k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8q3HAmnua6ck5df0dzwK2vAVZ_fBRZss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "539758962087-jnu813nehj9v989k12hom22houoe4n0k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
