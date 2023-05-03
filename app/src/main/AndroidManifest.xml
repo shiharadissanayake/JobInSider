@@ -15,16 +15,13 @@
         android:theme="@style/Theme.JobInSider"
         tools:targetApi="31">
         <activity
-            android:name=".JobList"
+            android:name=".JobSeeker"
             android:exported="false" />
         <activity
-            android:name=".DisplayJob"
+            android:name=".UserType"
             android:exported="false" />
         <activity
-            android:name=".AddJob"
-            android:exported="false" />
-        <activity
-            android:name=".JobProvider"
+            android:name=".LogIn"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +29,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AddJob"
+            android:exported="false" />
+        <activity
+            android:name=".JobProvider"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
