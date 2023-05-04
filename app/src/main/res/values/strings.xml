@@ -5,4 +5,36 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+
+    <string name="sign_in"> Sign in </string>
+    <string name="user_name">User Name</string>
+    <string name="username_hint">User Name</string>
+    <string name="password">Password</string>
+    <string name="btnLogin">Login</string>
+    <string name="or">OR</string>
+    <string name="btn_register">Register</string>
+    <string name="welcome">Hi, Welcome Back!</string>
+    <string name="perfectjob_text">Find your Perfect Job</string>
+    <string name="search_hint"> What are you looking for? </string>
+    <string name="searchbarHint">What are you looking for?</string>
+    <string name="engineeringtxt">Engineering</string>
+    <string name="healthTxt">Health</string>
+    <string name="buniessTxt">Business</string>
+    <string name="computerTxt">Technology</string>
+    <string name="viewallBtn">View All Jobs</string>
+    <string name="categoryTxt">Select Your Category</string>
+    <string name="postjobText">Post Job</string>
+    <string name="registrationForm">Registration Form</string>
+    <string name="birthdateText">Birth Date</string>
+    <string name="maleCb">Male</string>
+    <string name="genderText">Gender</string>
+    <string name="cbfemaleText">Female</string>
+    <string name="phonenumberText">Phone Number</string>
+    <string name="emailSpace">Email</string>
+    <string name="address">Address</string>
+    <string name="birthdateTxt">Birth Date</string>
+    <string name="selfIntro">Self Introduction</string>
+    <string name="jobportal">No 1 Job Portal in Sri Lanka</string>
+    <string name="helloText">Hello Dakshina!</string>
+    <string name="premiumMember">Gold Member</string>
 </resources>

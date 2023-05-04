@@ -18,4 +18,11 @@
     <color name="colorTitleText">#1D2D0F</color>
     <color name="colorText">#000000</color>
 
+
+    <color name="btnColor">#00B8D4</color>
+    <color name="searchbarText">#838282</color>
+    <color name="txtcolorBlue">#369BF4</color>
+    <color name="insidepageBgblue">#417FFD</color>
+    <color name="textInsidecolor">#C7C7C7</color>
+
 </resources>
