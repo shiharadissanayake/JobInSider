@@ -24,15 +24,17 @@ class ApplyJobs : AppCompatActivity() {
             val jobtitle = binding.JSName.text.toString()
             val jobdesc = binding.Town.text.toString()
             val jobqualification = binding.jstime.text.toString()
+            val jobposition = binding.jsvacancy.text.toString()
 
 
             database = FirebaseDatabase.getInstance().getReference("Job Applications")
-            val Job = JobApplications(jobtitle,jobdesc,jobqualification)
+            val Job = JobApplications(jobtitle,jobdesc,jobqualification,jobposition)
             database.child(jobtitle).setValue(Job).addOnSuccessListener {
 
                 binding.JSName.text.clear()
                 binding.Town.text.clear()
                 binding.jstime.text.clear()
+                binding.jsvacancy.text.clear()
 
 
                 Toast.makeText(this,"Successfully Saved", Toast.LENGTH_SHORT).show()
