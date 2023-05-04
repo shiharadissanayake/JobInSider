@@ -1,5 +1,6 @@
 package com.example.jobinsider
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -18,6 +19,7 @@ class JobSeeker : AppCompatActivity() {
 
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
         val navView : NavigationView = findViewById(R.id.nav_view)
+        val intent = Intent(this, JobDisplayJS::class.java)
 
         toogle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
         drawerLayout.addDrawerListener(toogle)
@@ -28,7 +30,7 @@ class JobSeeker : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
 
             when(it.itemId){
-                R.id.nav_home -> Toast.makeText(applicationContext,"Clicked Home",Toast.LENGTH_SHORT).show()
+                R.id.nav_home -> startActivity(intent)
                 R.id.nav_message -> Toast.makeText(applicationContext,"Clicked Message",Toast.LENGTH_SHORT).show()
                 R.id.nav_sync -> Toast.makeText(applicationContext,"Clicked Sync",Toast.LENGTH_SHORT).show()
                 R.id.nav_trash -> Toast.makeText(applicationContext,"Clicked Delete",Toast.LENGTH_SHORT).show()
