@@ -15,6 +15,9 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".EditJobApplications"
+            android:exported="false" />
+        <activity
             android:name=".ApplyJobs"
             android:exported="false" />
         <activity

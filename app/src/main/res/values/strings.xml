@@ -8,7 +8,7 @@
 
     <string name="sign_in"> Sign in </string>
     <string name="user_name">User Name</string>
-    <string name="username_hint">User Name</string>
+
     <string name="password">Password</string>
     <string name="btnLogin">Login</string>
     <string name="or">OR</string>

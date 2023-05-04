@@ -26,7 +26,7 @@ class ApplyJobs : AppCompatActivity() {
             val jobqualification = binding.jstime.text.toString()
 
 
-            database = FirebaseDatabase.getInstance().getReference("Job Vacancies")
+            database = FirebaseDatabase.getInstance().getReference("Job Applications")
             val Job = JobApplications(jobtitle,jobdesc,jobqualification)
             database.child(jobtitle).setValue(Job).addOnSuccessListener {
 

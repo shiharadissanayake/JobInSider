@@ -20,7 +20,9 @@ class JobSeeker : AppCompatActivity() {
 
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
         val navView : NavigationView = findViewById(R.id.nav_view)
-        val intent = Intent(this, JobDisplayJS::class.java)
+        val intent1 = Intent(this, JobDisplayJS::class.java)
+        val intent2 = Intent(this, ApplyJobs::class.java)
+        val intent3 = Intent(this, EditJobApplications::class.java)
 
         toogle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
         drawerLayout.addDrawerListener(toogle)
@@ -31,14 +33,10 @@ class JobSeeker : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
 
             when(it.itemId){
-                R.id.nav_home -> startActivity(intent)
-                R.id.nav_message -> Toast.makeText(applicationContext,"Clicked Message",Toast.LENGTH_SHORT).show()
-                R.id.nav_sync -> Toast.makeText(applicationContext,"Clicked Sync",Toast.LENGTH_SHORT).show()
-                R.id.nav_trash -> Toast.makeText(applicationContext,"Clicked Delete",Toast.LENGTH_SHORT).show()
-                R.id.nav_settings -> Toast.makeText(applicationContext,"Clicked Settings",Toast.LENGTH_SHORT).show()
-                R.id.nav_login -> Toast.makeText(applicationContext,"Clicked Login",Toast.LENGTH_SHORT).show()
-                R.id.nav_share -> Toast.makeText(applicationContext,"Clicked Share",Toast.LENGTH_SHORT).show()
-                R.id.nav_rate_us -> Toast.makeText(applicationContext,"Clicked Rate Us",Toast.LENGTH_SHORT).show()
+                R.id.nav_home -> startActivity(intent1)
+                R.id.nav_applyjob -> startActivity(intent2)
+                R.id.nav_update -> startActivity(intent3)
+
             }
 
             true
