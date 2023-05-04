@@ -3,6 +3,7 @@ package com.example.jobinsider
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -52,4 +53,10 @@ class JobSeeker : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
        }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        menuInflater.inflate(R.menu.option_menu,menu)
+
+        return super.onCreateOptionsMenu(menu)
+        }
 }
