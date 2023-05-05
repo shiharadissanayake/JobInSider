@@ -22,7 +22,7 @@
     <string name="buniessTxt">Business</string>
     <string name="computerTxt">Technology</string>
     <string name="viewallBtn">View All Jobs</string>
-    <string name="categoryTxt">Select Your Category</string>
+    <string name="categoryTxt">Select the Service You want</string>
     <string name="postjobText">Post Job</string>
     <string name="registrationForm">Registration Form</string>
     <string name="birthdateText">Birth Date</string>
@@ -37,4 +37,9 @@
     <string name="jobportal">No 1 Job Portal in Sri Lanka</string>
     <string name="helloText">Hello Dakshina!</string>
     <string name="premiumMember">Gold Member</string>
+    <string name="siginn">Sign In</string>
+    <string name="findaJob">Find A Job</string>
+    <string name="jobpost">Post A job</string>
+    <string name="reserveguide">Reserve A Guider</string>
+    <string name="allsettings">View User Settings</string>
 </resources>
