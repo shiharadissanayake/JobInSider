@@ -5,6 +5,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
+    android:background="@drawable/formbg"
 
 tools:context=".UpdateJobs">
 
@@ -13,14 +14,12 @@ tools:context=".UpdateJobs">
     android:layout_height="match_parent">
 
 
-
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:text="DELETE DATA"
+        android:layout_marginTop="220dp"
+        android:text="Delete Data"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -44,13 +43,17 @@ tools:context=".UpdateJobs">
 
     <Button
         android:id="@+id/deleteJobBtn"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
+        android:layout_width="188dp"
+        android:layout_height="59dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="612dp"
-        android:backgroundTint="@color/teal_200"
-        android:text="delete Post"
+        android:layout_marginTop="428dp"
+        android:background="@drawable/roundbtn"
+        android:backgroundTint="@color/buttonred"
+        android:text="delete"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

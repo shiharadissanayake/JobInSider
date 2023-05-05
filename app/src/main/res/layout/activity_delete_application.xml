@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/formbg"
 
     tools:context=".UpdateJobs">
 
@@ -13,19 +14,18 @@
         android:layout_height="match_parent">
 
 
-
-
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="180dp"
-            android:text="DELETE Application"
+            android:layout_marginTop="196dp"
+            android:text="Delete Application"
+            android:background="@drawable/roundbtn"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,23 +33,27 @@
             android:id="@+id/deleteapplication"
             android:layout_width="360dp"
             android:layout_height="50dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="76dp"
 
             android:hint="job position"
             android:paddingLeft="20dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-
         <Button
             android:id="@+id/deleteApplicationBtn"
-            android:layout_width="360dp"
-            android:layout_height="60dp"
+            android:layout_width="209dp"
+            android:layout_height="53dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="612dp"
-            android:backgroundTint="@color/teal_200"
-            android:text="delete Post"
+            android:layout_marginTop="408dp"
+            android:background="@drawable/roundbtn"
+            android:backgroundTint="@color/buttonred"
+            android:fontFamily="sans-serif-medium"
+            android:text="delete "
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
