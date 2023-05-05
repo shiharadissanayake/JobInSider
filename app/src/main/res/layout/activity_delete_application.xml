@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".ApplyJobs">
+    tools:context=".UpdateJobs">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+
 
 
         <TextView
@@ -17,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="180dp"
-            android:text="Apply Now"
+            android:text="DELETE Application"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -27,62 +30,26 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/JSName"
+            android:id="@+id/deleteapplication"
             android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginTop="36dp"
 
-            android:hint="Who are you?"
+            android:hint="job position"
             android:paddingLeft="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        <EditText
-            android:id="@+id/jsvacancy"
-            android:layout_width="360dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="32dp"
-
-            android:hint="Job Vacancy You Are Applying For"
-            android:paddingLeft="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/JSName" />
-
-        <EditText
-            android:id="@+id/Town"
-            android:layout_width="360dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="32dp"
-
-            android:hint="Where Are You From?"
-            android:paddingLeft="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/jsvacancy" />
-
-        <EditText
-            android:id="@+id/jstime"
-            android:layout_width="360dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="32dp"
-
-            android:hint="At what time can you work for us?"
-            android:paddingLeft="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Town" />
-
 
         <Button
-            android:id="@+id/applyBtn"
+            android:id="@+id/deleteApplicationBtn"
             android:layout_width="360dp"
             android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="612dp"
             android:backgroundTint="@color/teal_200"
-            android:text="Apply"
+            android:text="delete Post"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -93,3 +60,4 @@
 
 
 </ScrollView>
+
