@@ -53,56 +53,14 @@ class JobSeeker : AppCompatActivity() {
         }
     }
 
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//
-//        if(toogle.onOptionsItemSelected(item)){
-//
-//            return true
-//        }
-//        return super.onOptionsItemSelected(item)
-//       }
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-
-        menuInflater.inflate(R.menu.option_menu,menu)
-
-        return super.onCreateOptionsMenu(menu)
-        }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        when(item.itemId){
-            R.id.delete_user ->{
-                delete_user()
-                return true
-            }
-
-            else -> return super.onOptionsItemSelected(item)
-        }
-
-        return true
 
         if(toogle.onOptionsItemSelected(item)){
 
             return true
         }
         return super.onOptionsItemSelected(item)
-    }
-    private fun delete_user() {
-        val currentUser = auth.currentUser
-        if(currentUser != null){
-            val userRef = database.child("users").child(currentUser.uid)
-            userRef.removeValue()
-            currentUser.delete()
-                .addOnSuccessListener {
-                    Toast.makeText(this,"User deleted Successfully",Toast.LENGTH_SHORT).show()
-                    finish()
-                }
-                .addOnFailureListener{
-                    Toast.makeText(this,"Error deleteing user",Toast.LENGTH_SHORT).show()
-                }
-        }else{
-            Toast.makeText(this,"User not found",Toast.LENGTH_SHORT).show()
-        }
-    }
+       }
 
 
 }
