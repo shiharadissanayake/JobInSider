@@ -118,7 +118,10 @@ class JobProvider : AppCompatActivity() {
                 delete_user()
                 return true
             }
-
+            R.id.update_user ->{
+                startActivity(Intent(this,UpdateUserActivity::class.java))
+                return true
+            }
             else -> return super.onOptionsItemSelected(item)
         }
 
@@ -148,6 +151,8 @@ class JobProvider : AppCompatActivity() {
             Toast.makeText(this,"User not found",Toast.LENGTH_SHORT).show()
         }
     }
+
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
         menuInflater.inflate(R.menu.option_menu,menu)
@@ -155,6 +160,26 @@ class JobProvider : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
 
 }
+    private fun update_user(email: String, password: String){
+        val currentUser = auth.currentUser
+        if(currentUser != null){
+            val userUpdates = HashMap<String, Any>()
+            userUpdates["email"] = email
+            userUpdates["password"] = password
+
+            val userRef = database.child("users").child(currentUser.uid)
+            userRef.updateChildren(userUpdates)
+                .addOnSuccessListener {
+                    Toast.makeText(this,"User updated Successfully", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener{
+                    Toast.makeText(this,"Error updating user",Toast.LENGTH_SHORT).show()
+                }
+        }else{
+            Toast.makeText(this,"User not found",Toast.LENGTH_SHORT).show()
+            }
+
+        }
 
 
 
