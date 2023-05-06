@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_marginTop="16dp"
     android:layout_marginStart="16dp"
-    android:background="@color/white">
+    android:background="@color/insidepageBgblue">
 
     <TextView
         android:id="@+id/user_name"
@@ -14,7 +14,7 @@
         android:layout_height="73dp"
         android:paddingTop="8dp"
         android:text="Shihara Dissanayake"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold" />
 
@@ -23,7 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="user@gmail.com"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        android:textColor="@color/white"/>
 
 
 

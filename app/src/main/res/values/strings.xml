@@ -45,4 +45,5 @@
     <string name="updatebtnjobprovider">Update</string>
     <string name="deletejobbutton">Delete</string>
     <string name="alreadyuserloginsignup">Already an User? Login</string>
+    <string name="signuppagetxt">Sign up or login to see our top picks for you</string>
 </resources>

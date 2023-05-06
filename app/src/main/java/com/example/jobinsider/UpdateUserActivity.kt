@@ -13,6 +13,8 @@ import com.google.firebase.database.FirebaseDatabase
 
 class UpdateUserActivity : AppCompatActivity() {
 
+
+
     private lateinit var nameEditText: EditText
     private lateinit var passwordEditText: EditText
     private lateinit var saveButton: Button
@@ -30,7 +32,7 @@ class UpdateUserActivity : AppCompatActivity() {
 
         nameEditText = findViewById(R.id.edit_text_new_email)
         passwordEditText = findViewById(R.id.edit_text_new_password)
-        saveButton = findViewById(R.id.updateBtn)
+//        saveButton = findViewById(R.id.button_update)
 
         saveButton.setOnClickListener{
             update_user()

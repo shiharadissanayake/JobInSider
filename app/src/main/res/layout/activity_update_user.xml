@@ -61,6 +61,7 @@
         android:layout_width="164dp"
         android:layout_height="63dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="80dp"
         android:background="@drawable/roundbtn"
         android:backgroundTint="@color/btnColor"
         android:text="Update"
@@ -70,8 +71,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_new_password"/>
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_new_password"
+        app:layout_constraintVertical_bias="0.754" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
