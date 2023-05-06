@@ -7,25 +7,4 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
-    <color name="colorPrimary">#7E8D58</color>
-    <color name="colorPrimaryDark">#234f13</color>
-    <color name="colorAccent">#c4cabb</color>
-    <color name="colorWhite">#FFFFFF</color>
-    <color name="colorTransparent">#00000000</color>
-    <color name="colorBackground">#fff</color>
-    <color name="colorBackground2">#E1E6DC</color>
-    <color name="colorTitleText">#1D2D0F</color>
-    <color name="colorText">#000000</color>
-    <color name="buttonred">#BF2323</color>
-    <color name="navmenu">#abcbfd</color>
-
-
-
-    <color name="btnColor">#00B8D4</color>
-    <color name="searchbarText">#838282</color>
-    <color name="txtcolorBlue">#369BF4</color>
-    <color name="insidepageBgblue">#417FFD</color>
-    <color name="textInsidecolor">#C7C7C7</color>
-
 </resources>

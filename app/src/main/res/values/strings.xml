@@ -1,49 +1,46 @@
 <resources>
-    <string name="app_name">JobInSider</string>
+    <string name="app_name">JOBINSIDER</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="open">Open</string>
-    <string name="close">Close</string>
+    <string-array name="user_type_entries">
+        <item>Select User Type</item>
+        <item>Event Planner</item>
+        <item>Customer</item>
+        <item>Photographer</item>
+        <item>Cake Designer</item>
+        <item>Costume Designer</item>
+        <item>Party Decorator</item>
+        <item>Hotel Owner</item>
+    </string-array>
 
-    <string name="sign_in"> Sign in </string>
-    <string name="user_name">User Name</string>
+    <string-array name="ratings_entries">
+        <item>Select Ratings Start</item>
+        <item>One Star</item>
+        <item>Two Star</item>
+        <item>Three Star</item>
+        <item>Four Start</item>
+        <item>Five Star</item>
+    </string-array>
 
-    <string name="password">Password</string>
-    <string name="btnLogin">Login</string>
-    <string name="or">OR</string>
-    <string name="btn_register">Register</string>
-    <string name="welcome">Hi, Welcome Back!</string>
-    <string name="perfectjob_text">Find your Perfect Job</string>
-    <string name="search_hint"> What are you looking for? </string>
-    <string name="searchbarHint">What are you looking for?</string>
-    <string name="engineeringtxt">Engineering</string>
-    <string name="healthTxt">Health</string>
-    <string name="buniessTxt">Business</string>
-    <string name="computerTxt">Technology</string>
-    <string name="viewallBtn">View All Jobs</string>
-    <string name="categoryTxt">Select the Service You want</string>
-    <string name="postjobText">Post Job</string>
-    <string name="registrationForm">Registration Form</string>
-    <string name="birthdateText">Birth Date</string>
-    <string name="maleCb">Male</string>
-    <string name="genderText">Gender</string>
-    <string name="cbfemaleText">Female</string>
-    <string name="phonenumberText">Phone Number</string>
-    <string name="emailSpace">Email</string>
-    <string name="address">Address</string>
-    <string name="birthdateTxt">Birth Date</string>
-    <string name="selfIntro">Self Introduction</string>
-    <string name="jobportal">No 1 Job Portal in Sri Lanka</string>
-    <string name="helloText">Hello Dakshina!</string>
-    <string name="premiumMember">Gold Member</string>
-    <string name="siginn">Sign In</string>
-    <string name="findaJob">Find A Job</string>
-    <string name="jobpost">Post A job</string>
-    <string name="reserveguide">Reserve A Guider</string>
-    <string name="allsettings">View User Settings</string>
-    <string name="updatebtnjobprovider">Update</string>
-    <string name="deletejobbutton">Delete</string>
-    <string name="alreadyuserloginsignup">Already an User? Login</string>
-    <string name="signuppagetxt">Sign up or login to see our top picks for you</string>
+    <string-array name="size_values">
+        <item>12</item>
+        <item>16</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="event_type">
+        <item>Select Event Title</item>
+        <item>Wedding</item>
+        <item>Birth Day Party (Male)</item>
+        <item>Birth Day Party (Female)</item>
+        <item>Anniversary</item>
+        <item>Office Party</item>
+        <item>Be To A Bridal</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="yes_no_answer">
+        <item>Select Answer</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
 </resources>

@@ -1,65 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/insidepageBgblue"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:background="@color/black"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
     tools:context=".MainActivity">
 
-<!--    <ImageView-->
-<!--        android:id="@+id/image_firstScreenImage"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="250dp"-->
-<!--        android:layout_marginTop="65dp"-->
-<!--        android:src="@drawable/ic_app"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"/>-->
-
-    <ImageView
-        android:id="@+id/iv_note"
-        android:layout_width="456dp"
-        android:layout_height="416dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498"
-        tools:ignore="MissingConstraints" />
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/bgimg_1">
 
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="101dp">
 
-    <!--    <TextView-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="50dp"-->
-<!--        android:includeFontPadding="false"-->
-<!--        android:text="JobInSider"-->
-<!--        android:textAlignment="center"-->
-<!--        android:textSize="60sp"-->
-<!--        android:id="@+id/text_firstScreenDesc"-->
-
-<!--        app:layout_constraintBottom_toTopOf="@id/text_firstScreenDesc"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--         />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/text_firstScreenText"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="50dp"-->
-<!--        android:text="Slogan text"-->
-<!--        android:textAlignment="center"-->
-<!--        android:textSize="18sp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"/>-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="35dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="RESERVE GUIDER"
+                    android:textFontWeight="800"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Full Name"
+                    android:textSize="15dp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="7dp">
+
+                    <EditText
+                        android:id="@+id/txtFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/spinner_style" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Telephone Number"
+                    android:textSize="15dp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="7dp">
+
+                    <EditText
+                        android:id="@+id/txtTel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/spinner_style" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Date"
+                    android:textSize="15dp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="7dp">
+
+                    <EditText
+                        android:id="@+id/txtDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/spinner_style" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Time"
+                    android:textSize="15dp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="7dp">
+
+                    <EditText
+                        android:id="@+id/txtTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/spinner_style" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Job Provider"
+                    android:textSize="15dp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="7dp">
+
+                    <Spinner
+                        android:id="@+id/spinnerJobProvider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/spinner_style"
+                        android:entries="@array/user_type_entries" />
+
+
+                </FrameLayout>
+
+
+                <Button
+                    android:id="@+id/btnReserve"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/btnshape"
+                    android:letterSpacing="0.1"
+                    android:text="RESERVE"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
