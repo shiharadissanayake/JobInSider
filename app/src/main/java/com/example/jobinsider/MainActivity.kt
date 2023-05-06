@@ -2,8 +2,12 @@ package com.example.jobinsider
 
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
+import androidx.appcompat.app.ActionBar
 import com.example.jobinsider.databinding.ActivityLogInBinding
 
 
@@ -11,12 +15,16 @@ import com.example.jobinsider.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+
     private lateinit var binding: ActivityMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
 
         binding.ivNote.alpha = 0f
         binding.ivNote.animate().setDuration(1500).alpha(1F).withEndAction{

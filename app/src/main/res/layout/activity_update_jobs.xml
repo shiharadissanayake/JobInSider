@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/formbg"
 
     tools:context=".UpdateJobs">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/imageView"
@@ -25,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="180dp"
-            android:text="UPDATE DATA"
+            android:text="Update Job"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -71,21 +69,24 @@
             app:layout_constraintTop_toBottomOf="@+id/firstName" />
 
 
-        <Button
-            android:id="@+id/updateBtn"
-            android:layout_width="360dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="612dp"
-            android:backgroundTint="@color/teal_200"
-            android:text="Update Post"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="164dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/roundbtn"
+        android:backgroundTint="@color/btnColor"
+        android:text="Update"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.754" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
-</ScrollView>

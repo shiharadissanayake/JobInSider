@@ -42,4 +42,7 @@
     <string name="jobpost">Post A job</string>
     <string name="reserveguide">Reserve A Guider</string>
     <string name="allsettings">View User Settings</string>
+    <string name="updatebtnjobprovider">Update</string>
+    <string name="deletejobbutton">Delete</string>
+    <string name="alreadyuserloginsignup">Already an User? Login</string>
 </resources>

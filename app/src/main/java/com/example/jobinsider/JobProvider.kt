@@ -117,7 +117,7 @@ class JobProvider : AppCompatActivity() {
     }
 
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    /*override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when(item.itemId){
             R.id.delete_user ->{
@@ -138,7 +138,7 @@ class JobProvider : AppCompatActivity() {
             return true
         }
         return super.onOptionsItemSelected(item)
-    }
+    }*/
 
     private fun delete_user() {
         val currentUser = auth.currentUser
@@ -190,3 +190,5 @@ class JobProvider : AppCompatActivity() {
 
 
 }
+
+
