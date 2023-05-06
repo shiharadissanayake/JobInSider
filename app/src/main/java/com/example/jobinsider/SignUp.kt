@@ -24,7 +24,7 @@ class SignUp : AppCompatActivity() {
         setContentView(binding.root)
 
         firebaseAuth = FirebaseAuth.getInstance()
-        database = FirebaseDatabase.getInstance().reference
+
 
         binding.signupButton.setOnClickListener{
 
@@ -52,8 +52,33 @@ class SignUp : AppCompatActivity() {
             }
 
 
+
+
             if (currentUser != null) {
-                val userRef =database.child("Users").child(currentUser.uid)
+
+
+
+                val username = binding.signupName.text.toString()
+                val email = binding.signupEmail.text.toString()
+
+
+                database = FirebaseDatabase.getInstance().getReference("Users")
+                val user= UserData(username,email)
+                database.child(currentUser.uid).setValue(user).addOnSuccessListener {
+
+                    binding.signupName.text.clear()
+                    binding.signupEmail.text.clear()
+
+                    Toast.makeText(this,"Successfully Saved", Toast.LENGTH_SHORT).show()
+
+                }.addOnFailureListener{
+
+                    Toast.makeText(this,"Failed", Toast.LENGTH_SHORT).show()
+
+
+                }
+
+
 
 
             }

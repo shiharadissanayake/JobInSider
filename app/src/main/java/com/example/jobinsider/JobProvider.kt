@@ -17,6 +17,9 @@ import androidx.appcompat.widget.SearchView
 import com.example.jobinsider.databinding.ActivityJobProviderBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import java.util.*
+import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
 
 class JobProvider : AppCompatActivity() {
@@ -31,6 +34,9 @@ class JobProvider : AppCompatActivity() {
     private lateinit var NewEmail: EditText
     private lateinit var NewPassword: EditText
     private lateinit var saveButton: Button
+
+    private lateinit var searchView: SearchView
+    private lateinit var searchList: ArrayList<JobData>
 
     lateinit var toogle : ActionBarDrawerToggle
 
@@ -51,8 +57,37 @@ class JobProvider : AppCompatActivity() {
         jobRecyclerview.layoutManager = LinearLayoutManager(this)
         jobRecyclerview.setHasFixedSize(true)
 
+        searchView = findViewById(R.id.search)
+
         jobArrayList = arrayListOf<JobData>()
+        searchList = arrayListOf<JobData>()
         getUserData()
+
+        searchView.clearFocus()
+        searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                searchView.clearFocus()
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                searchList.clear()
+                val searchText = newText!!.toLowerCase(Locale.getDefault())
+                if (searchText.isNotEmpty()){
+                    jobArrayList.forEach{
+                        if (it.jobtitle?.toLowerCase(Locale.getDefault())!!.contains(searchText)) {
+                            searchList.add(it)
+                        }
+                    }
+                    jobRecyclerview.adapter!!.notifyDataSetChanged()
+                } else {
+                    searchList.clear()
+                    searchList.addAll(jobArrayList)
+                    jobRecyclerview.adapter!!.notifyDataSetChanged()
+                }
+                return false
+            }
+        })
 
 
         binding.fab.setOnClickListener(View.OnClickListener {
@@ -97,8 +132,9 @@ class JobProvider : AppCompatActivity() {
                         jobArrayList.add(user!!)
 
                     }
+                    searchList.addAll(jobArrayList)
 
-                    jobRecyclerview.adapter = MyAdapter(jobArrayList)
+                    jobRecyclerview.adapter = MyAdapter(searchList)
 
 
 
@@ -117,7 +153,7 @@ class JobProvider : AppCompatActivity() {
     }
 
 
-    /*override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when(item.itemId){
             R.id.delete_user ->{
@@ -138,7 +174,7 @@ class JobProvider : AppCompatActivity() {
             return true
         }
         return super.onOptionsItemSelected(item)
-    }*/
+    }
 
     private fun delete_user() {
         val currentUser = auth.currentUser
@@ -156,6 +192,19 @@ class JobProvider : AppCompatActivity() {
         }else{
             Toast.makeText(this,"User not found",Toast.LENGTH_SHORT).show()
         }
+
+
+
+//        database = FirebaseDatabase.getInstance().getReference("Users")
+//        if (currentUser != null) {
+//            database.child(currentUser.uid).removeValue().addOnSuccessListener{
+//                Toast.makeText(this,"Successfully Deleted",Toast.LENGTH_SHORT).show()
+//            }.addOnFailureListener{
+//                Toast.makeText(this,"Failure",Toast.LENGTH_SHORT).show()
+//            }
+//        }
+
+
     }
 
 
