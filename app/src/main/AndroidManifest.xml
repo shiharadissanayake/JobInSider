@@ -2,65 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/logo"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/Theme.JobInSider"
         tools:targetApi="31">
         <activity
-            android:name=".DisplayApplications"
-            android:exported="false" />
-
-        <activity
-            android:name=".UpdateUserActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DeleteApplication"
-            android:exported="false" />
-        <activity
-            android:name=".EditJobApplications"
-            android:exported="false" />
-        <activity
-            android:name=".ApplyJobs"
-            android:exported="false" />
-        <activity
-            android:name=".JobDisplayJS"
-            android:exported="false" />
-        <activity
-            android:name=".SignUp"
-            android:exported="false" />
-        <activity
-            android:name=".DeleteJob"
-            android:exported="false" />
-        <activity
-            android:name=".UpdateJobs"
-            android:exported="false" />
-        <activity
-            android:name=".JobSeeker"
-            android:exported="false" />
-        <activity
-            android:name=".UserType"
-            android:exported="false" />
-        <activity
-            android:name=".LogIn"
-            android:exported="false" />
-        <activity
-            android:name=".AddJob"
-            android:exported="false" />
-        <activity
-            android:name=".JobProvider"
+            android:name=".reserve_list"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/SplashScreenTheme">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
