@@ -81,12 +81,15 @@
             android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="532dp"
+            android:background="@drawable/roundbtn"
             android:backgroundTint="@color/teal_200"
             android:text="Apply"
+            android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.509"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jstime"
             app:layout_constraintTop_toTopOf="parent" />
 
 
