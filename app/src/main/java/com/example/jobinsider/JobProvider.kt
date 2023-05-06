@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 
@@ -25,6 +27,10 @@ class JobProvider : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var database: DatabaseReference
+
+    private lateinit var NewEmail: EditText
+    private lateinit var NewPassword: EditText
+    private lateinit var saveButton: Button
 
     lateinit var toogle : ActionBarDrawerToggle
 
@@ -160,26 +166,26 @@ class JobProvider : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
 
 }
-    private fun update_user(email: String, password: String){
+    private fun update_user() {
         val currentUser = auth.currentUser
-        if(currentUser != null){
+        if (currentUser != null) {
+            val uid = currentUser.uid
             val userUpdates = HashMap<String, Any>()
-            userUpdates["email"] = email
-            userUpdates["password"] = password
-
-            val userRef = database.child("users").child(currentUser.uid)
+            userUpdates["email"] = NewEmail
+            userUpdates["password"] = NewPassword
+            val userRef = database.child("users").child(uid)
             userRef.updateChildren(userUpdates)
                 .addOnSuccessListener {
-                    Toast.makeText(this,"User updated Successfully", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "User updated successfully", Toast.LENGTH_SHORT).show()
                 }
-                .addOnFailureListener{
-                    Toast.makeText(this,"Error updating user",Toast.LENGTH_SHORT).show()
+                .addOnFailureListener {
+                    Toast.makeText(this, "Error in updating user", Toast.LENGTH_SHORT).show()
                 }
-        }else{
-            Toast.makeText(this,"User not found",Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "User not found", Toast.LENGTH_SHORT).show()
             }
 
-        }
+       }
 
 
 
