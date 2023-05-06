@@ -222,8 +222,10 @@ class JobProvider : AppCompatActivity() {
         if (currentUser != null) {
             val uid = currentUser.uid
             val userUpdates = HashMap<String, Any>()
+
             userUpdates["email"] = NewEmail
             userUpdates["password"] = NewPassword
+
             val userRef = database.child("Users").child(uid)
             userRef.updateChildren(userUpdates)
                 .addOnSuccessListener {

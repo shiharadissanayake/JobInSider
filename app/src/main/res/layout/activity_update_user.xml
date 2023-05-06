@@ -50,7 +50,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
 
-        android:hint="New Password"
+        android:hint="New UserName"
         android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
