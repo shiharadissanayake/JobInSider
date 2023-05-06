@@ -3,7 +3,6 @@ package com.example.jobinsider
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.jobinsider.databinding.ActivityAddJobBinding
 
 import com.example.jobinsider.databinding.ActivityApplyJobsBinding
 import com.google.firebase.database.DatabaseReference
@@ -25,6 +24,11 @@ class ApplyJobs : AppCompatActivity() {
             val jobdesc = binding.Town.text.toString()
             val jobqualification = binding.jstime.text.toString()
             val jobposition = binding.jsvacancy.text.toString()
+
+            if(jobtitle.isEmpty()){
+                Toast.makeText(this,"Job title is required",Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
 
             database = FirebaseDatabase.getInstance().getReference("Job Applications")

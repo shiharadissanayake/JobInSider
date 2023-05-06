@@ -23,6 +23,16 @@ class AddJob : AppCompatActivity() {
             val jobqualification = binding.jobqualification.text.toString()
             val companyname = binding.CompanyName.text.toString()
 
+            if(jobtitle.isEmpty()){
+                Toast.makeText(this,"Job title is required",Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if(companyname.isEmpty()){
+                Toast.makeText(this,"Company Name is required",Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             database = FirebaseDatabase.getInstance().getReference("Job Vacancies")
             val Job = JobData(jobtitle,jobdesc,jobqualification,companyname)
             database.child(jobtitle).setValue(Job).addOnSuccessListener {

@@ -22,6 +22,7 @@ import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 
 
+@Suppress("UNREACHABLE_CODE")
 class JobProvider : AppCompatActivity() {
 
     private lateinit var dbref : DatabaseReference
@@ -33,7 +34,7 @@ class JobProvider : AppCompatActivity() {
 
     private lateinit var NewEmail: EditText
     private lateinit var NewPassword: EditText
-    private lateinit var saveButton: Button
+
 
     private lateinit var searchView: SearchView
     private lateinit var searchList: ArrayList<JobData>
@@ -162,6 +163,7 @@ class JobProvider : AppCompatActivity() {
             }
             R.id.update_user ->{
                 startActivity(Intent(this,UpdateUserActivity::class.java))
+                update_user()
                 return true
             }
             else -> return super.onOptionsItemSelected(item)
@@ -195,14 +197,14 @@ class JobProvider : AppCompatActivity() {
 
 
 
-//        database = FirebaseDatabase.getInstance().getReference("Users")
-//        if (currentUser != null) {
-//            database.child(currentUser.uid).removeValue().addOnSuccessListener{
-//                Toast.makeText(this,"Successfully Deleted",Toast.LENGTH_SHORT).show()
-//            }.addOnFailureListener{
-//                Toast.makeText(this,"Failure",Toast.LENGTH_SHORT).show()
-//            }
-//        }
+        database = FirebaseDatabase.getInstance().getReference("Users")
+        if (currentUser != null) {
+            database.child(currentUser.uid).removeValue().addOnSuccessListener{
+                Toast.makeText(this,"Successfully Deleted",Toast.LENGTH_SHORT).show()
+            }.addOnFailureListener{
+                Toast.makeText(this,"Failure",Toast.LENGTH_SHORT).show()
+            }
+        }
 
 
     }
@@ -222,7 +224,7 @@ class JobProvider : AppCompatActivity() {
             val userUpdates = HashMap<String, Any>()
             userUpdates["email"] = NewEmail
             userUpdates["password"] = NewPassword
-            val userRef = database.child("users").child(uid)
+            val userRef = database.child("Users").child(uid)
             userRef.updateChildren(userUpdates)
                 .addOnSuccessListener {
                     Toast.makeText(this, "User updated successfully", Toast.LENGTH_SHORT).show()

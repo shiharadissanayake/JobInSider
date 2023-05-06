@@ -24,6 +24,8 @@ class UpdateJobs : AppCompatActivity() {
             val lastName = binding.lastname.text.toString()
 
 
+
+
             updateData(userName,firstName,lastName)
 
         }
