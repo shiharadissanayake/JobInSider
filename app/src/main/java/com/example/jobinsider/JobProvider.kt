@@ -39,8 +39,8 @@ class JobProvider : AppCompatActivity() {
     private lateinit var NewPassword: EditText
 
 
-    private lateinit var searchView: SearchView
-    private lateinit var searchList: ArrayList<JobData>
+//    private lateinit var searchView: SearchView
+//    private lateinit var searchList: ArrayList<JobData>
 
     lateinit var toogle : ActionBarDrawerToggle
 
@@ -59,36 +59,36 @@ class JobProvider : AppCompatActivity() {
 
         binding = ActivityJobProviderBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-            val gridLayoutManager = GridLayoutManager(this@JobProvider, 1)
-        binding.recyclerView.layoutManager = gridLayoutManager
-        binding.search.clearFocus()
-                val builder = AlertDialog.Builder(this@JobProvider)
-        builder.setCancelable(false)
-        builder.setView(R.layout.progress_layout)
-        val dialog = builder.create()
-        dialog.show()
-        dataList = ArrayList()
-        adapter = MyAdapter(this@JobProvider, dataList)
-        binding.recyclerView.adapter = adapter
-        databaseReference = FirebaseDatabase.getInstance().getReference("Todo List")
-        dialog.show()
-        eventListener = databaseReference!!.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                dataList.clear()
-                for (itemSnapshot in snapshot.children) {
-                    val dataClass = itemSnapshot.getValue(DataClass::class.java)
-                    if (dataClass != null) {
-                        dataList.add(dataClass)
-                    }
-                }
-                adapter.notifyDataSetChanged()
-                dialog.dismiss()
-            }
-            override fun onCancelled(error: DatabaseError) {
-                dialog.dismiss()
-            }
-        })
+//
+//            val gridLayoutManager = GridLayoutManager(this@JobProvider, 1)
+//        binding.recyclerView.layoutManager = gridLayoutManager
+//        binding.search.clearFocus()
+//                val builder = AlertDialog.Builder(this@JobProvider)
+//        builder.setCancelable(false)
+//        builder.setView(R.layout.progress_layout)
+//        val dialog = builder.create()
+//        dialog.show()
+//        dataList = ArrayList()
+//        adapter = MyAdapter(this@JobProvider, dataList)
+//        binding.recyclerView.adapter = adapter
+//        databaseReference = FirebaseDatabase.getInstance().getReference("Job Application")
+//        dialog.show()
+//        eventListener = databaseReference!!.addValueEventListener(object : ValueEventListener {
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                dataList.clear()
+//                for (itemSnapshot in snapshot.children) {
+//                    val dataClass = itemSnapshot.getValue(DataClass::class.java)
+//                    if (dataClass != null) {
+//                        dataList.add(dataClass)
+//                    }
+//                }
+//                adapter.notifyDataSetChanged()
+//                dialog.dismiss()
+//            }
+//            override fun onCancelled(error: DatabaseError) {
+//                dialog.dismiss()
+//            }
+//        })
 
 
         auth = FirebaseAuth.getInstance()

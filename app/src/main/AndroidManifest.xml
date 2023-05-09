@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="31">
-
+        <activity
+            android:name=".DisplayApplications"
+            android:exported="false" />
         <activity
             android:name=".UpdateUserActivity"
             android:exported="false" />
@@ -27,7 +29,6 @@
         <activity
             android:name=".ApplyJobs"
             android:exported="false" />
-
         <activity
             android:name=".SignUp"
             android:exported="false" />

@@ -32,7 +32,7 @@ class JobSeeker : AppCompatActivity() {
         val intent2 = Intent(this, ApplyJobs::class.java)
         val intent3 = Intent(this, EditJobApplications::class.java)
         val intent4 = Intent(this, DeleteApplication::class.java)
-//        val intent5 = Intent(this, DisplayApplications::class.java)
+        val intent5 = Intent(this, DisplayApplications::class.java)
 
         toogle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
         drawerLayout.addDrawerListener(toogle)
@@ -47,7 +47,7 @@ class JobSeeker : AppCompatActivity() {
                 R.id.nav_applyjob -> startActivity(intent2)
                 R.id.nav_update -> startActivity(intent3)
                 R.id.nav_deleteApplication -> startActivity(intent4)
-//                R.id.nav_viewApplication -> startActivity(intent5)
+                R.id.nav_viewApplication -> startActivity(intent5)
 
             }
 

@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/formbg">
+    tools:context=".JobProvider">
 
     <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"
@@ -19,70 +18,64 @@
         app:searchHintIcon="@null"
         app:queryHint="Search..."
         android:focusable="false"
-        app:closeIcon="@drawable/baseline_clear_24"
         app:searchIcon="@drawable/baseline_search_24"
         />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/userList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/search"
-        android:layout_marginTop="83dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/activity_job_list" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="40dp"
-        android:contentDescription="Add Job"
-        android:src="@drawable/baseline_add_24"
-        app:backgroundTint="@color/btnColor"
-        app:tint="@color/white" />
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/recyclerView"-->
+<!--        android:layout_below="@id/search"-->
+<!--        android:scrollbars="vertical"/>-->
 
     <Button
         android:id="@+id/updateJobButton"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="false"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/roundbtn"
-        android:backgroundTint="@color/insidepageBgblue"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="100dp"
         android:text="Update"
-        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
         android:textSize="18sp"
         app:cornerRadius="30dp" />
 
     <Button
         android:id="@+id/deleteJobButton"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="false"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/roundbtn"
-        android:backgroundTint="@color/buttonred"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="180dp"
         android:text="Delete"
-        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
         android:textSize="18sp"
-        app:cornerRadius="30dp" />
+        app:cornerRadius="30dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Add Job"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="40dp"
+        app:tint = "@color/white"
+        android:src="@drawable/baseline_add_24" />
+
+
+
+
 
 </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+

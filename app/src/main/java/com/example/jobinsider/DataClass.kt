@@ -3,16 +3,16 @@ package com.example.jobinsider
 
 class DataClass {
 
-        var dataTitle: String? = null
-        var dataDesc: String? = null
-        var dataPriority: String? = null
-        var dataImage: String? = null
+        var fulllname: String? = null
+        var jobposition: String? = null
+        var time: String? = null
+        var town: String? = null
 
-        constructor(dataTitle: String?, dataDesc: String?, dataPriority: String?, dataImage: String?){
-            this.dataTitle = dataTitle
-            this.dataDesc = dataDesc
-            this.dataPriority = dataPriority
-            this.dataImage = dataImage
+        constructor(fulllname: String?, jobposition: String?, time: String?, town: String?){
+            this.fulllname = fulllname
+            this.jobposition = jobposition
+            this.time = time
+            this.town = town
         }
         constructor()
         {}
