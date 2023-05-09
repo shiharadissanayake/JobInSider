@@ -3,10 +3,13 @@ package com.example.jobinsider
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.jobinsider.databinding.ActivityDisplayApplicationsBinding
 import com.example.jobinsider.databinding.ActivityJobProviderBinding
 import com.google.firebase.database.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 private lateinit var binding: ActivityDisplayApplicationsBinding
@@ -53,5 +56,27 @@ class DisplayApplications : AppCompatActivity() {
             }
         })
 
+        binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                return false
+            }
+            override fun onQueryTextChange(newText: String): Boolean {
+                searchList(newText)
+                return true
+            }
+        })
     }
-}
+    fun searchList(text: String) {
+        val searchList = java.util.ArrayList<DataClass>()
+        for (dataClass in dataList) {
+            if (dataClass.jobposition?.lowercase()
+                    ?.contains(text.lowercase(Locale.getDefault())) == true
+            ) {
+                searchList.add(dataClass)
+            }
+        }
+        adapter.searchDataList(searchList)
+    }
+
+    }
+

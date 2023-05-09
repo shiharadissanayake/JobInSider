@@ -35,6 +35,11 @@ class MyAdapter(private val context: Context, private var dataList: List<DataCla
         return dataList.size
     }
 
+    fun searchDataList(searchList: List<DataClass>) {
+        dataList = searchList
+        notifyDataSetChanged()
+    }
+
 }
 
 class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

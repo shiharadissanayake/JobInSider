@@ -242,7 +242,7 @@ class JobProvider : AppCompatActivity() {
     private fun delete_user() {
         val currentUser = auth.currentUser
         if(currentUser != null){
-            val userRef = database.child("users").child(currentUser.uid)
+            val userRef = database.child("Users").child(currentUser.uid)
             userRef.removeValue()
             currentUser.delete()
                 .addOnSuccessListener {
