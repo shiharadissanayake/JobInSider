@@ -21,13 +21,13 @@
         app:searchIcon="@drawable/baseline_search_24"
         />
 
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:id="@+id/recyclerView"-->
-<!--        android:layout_below="@id/search"-->
-<!--        android:scrollbars="vertical"/>-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView1"
+        android:layout_below="@id/search"
+        android:scrollbars="vertical"/>
 
     <Button
         android:id="@+id/updateJobButton"

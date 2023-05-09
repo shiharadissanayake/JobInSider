@@ -26,6 +26,7 @@ import kotlin.collections.HashMap
 
 
 
+
 class JobProvider : AppCompatActivity() {
 
 //    private lateinit var dbref : DatabaseReference
@@ -49,8 +50,8 @@ class JobProvider : AppCompatActivity() {
     private lateinit var binding: ActivityJobProviderBinding
     var databaseReference: DatabaseReference? = null
     var eventListener: ValueEventListener? = null
-    private lateinit var dataList: ArrayList<DataClass>
-    private lateinit var adapter: MyAdapter
+    private lateinit var dataList: ArrayList<JobDataClass>
+    private lateinit var adapter: JobAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,36 +60,36 @@ class JobProvider : AppCompatActivity() {
 
         binding = ActivityJobProviderBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//
-//            val gridLayoutManager = GridLayoutManager(this@JobProvider, 1)
-//        binding.recyclerView.layoutManager = gridLayoutManager
-//        binding.search.clearFocus()
-//                val builder = AlertDialog.Builder(this@JobProvider)
-//        builder.setCancelable(false)
-//        builder.setView(R.layout.progress_layout)
-//        val dialog = builder.create()
-//        dialog.show()
-//        dataList = ArrayList()
-//        adapter = MyAdapter(this@JobProvider, dataList)
-//        binding.recyclerView.adapter = adapter
-//        databaseReference = FirebaseDatabase.getInstance().getReference("Job Application")
-//        dialog.show()
-//        eventListener = databaseReference!!.addValueEventListener(object : ValueEventListener {
-//            override fun onDataChange(snapshot: DataSnapshot) {
-//                dataList.clear()
-//                for (itemSnapshot in snapshot.children) {
-//                    val dataClass = itemSnapshot.getValue(DataClass::class.java)
-//                    if (dataClass != null) {
-//                        dataList.add(dataClass)
-//                    }
-//                }
-//                adapter.notifyDataSetChanged()
-//                dialog.dismiss()
-//            }
-//            override fun onCancelled(error: DatabaseError) {
-//                dialog.dismiss()
-//            }
-//        })
+
+            val gridLayoutManager = GridLayoutManager(this@JobProvider, 1)
+        binding.recyclerView1.layoutManager = gridLayoutManager
+        binding.search.clearFocus()
+                val builder = AlertDialog.Builder(this@JobProvider)
+        builder.setCancelable(false)
+        builder.setView(R.layout.progress_layout)
+        val dialog = builder.create()
+        dialog.show()
+        dataList = ArrayList()
+        adapter = JobAdapter(this@JobProvider, dataList)
+        binding.recyclerView1.adapter = adapter
+        databaseReference = FirebaseDatabase.getInstance().getReference("Job Vacancies")
+        dialog.show()
+        eventListener = databaseReference!!.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                dataList.clear()
+                for (itemSnapshot in snapshot.children) {
+                    val dataClass = itemSnapshot.getValue(JobDataClass::class.java)
+                    if (dataClass != null) {
+                        dataList.add(dataClass)
+                    }
+                }
+                adapter.notifyDataSetChanged()
+                dialog.dismiss()
+            }
+            override fun onCancelled(error: DatabaseError) {
+                dialog.dismiss()
+            }
+        })
 
 
         auth = FirebaseAuth.getInstance()
@@ -136,6 +137,8 @@ class JobProvider : AppCompatActivity() {
             val intent = Intent(this@JobProvider, AddJob::class.java)
             startActivity(intent)
         })
+
+
 //
         binding.updateJobButton.setOnClickListener {
 
@@ -151,48 +154,27 @@ class JobProvider : AppCompatActivity() {
 
         }
 
-
-
-
-
+        binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                return false
+            }
+            override fun onQueryTextChange(newText: String): Boolean {
+                searchList(newText)
+                return true
+            }
+        })
     }
-
-//    private fun getUserData() {
-//
-//        dbref = FirebaseDatabase.getInstance().getReference("Job Vacancies")
-//
-//        dbref.addValueEventListener(object : ValueEventListener{
-//
-//            override fun onDataChange(snapshot: DataSnapshot) {
-//
-//                if (snapshot.exists()){
-//
-//                    for (userSnapshot in snapshot.children){
-//
-//
-//                        val user = userSnapshot.getValue(JobData::class.java)
-//                        jobArrayList.add(user!!)
-//
-//                    }
-//
-//                    jobRecyclerview.adapter = JobAdapter(jobArrayList)
-//
-//
-//                }
-//
-//            }
-//
-//            override fun onCancelled(error: DatabaseError) {
-//                TODO("Not yet implemented")
-//            }
-//
-//
-//        })
-//
-//    }
-
-
-
+    fun searchList(text: String) {
+        val searchList = java.util.ArrayList<JobDataClass>()
+        for (dataClass in dataList) {
+            if (dataClass.jobtitle?.lowercase()
+                    ?.contains(text.lowercase(Locale.getDefault())) == true
+            ) {
+                searchList.add(dataClass)
+            }
+        }
+        adapter.searchDataList(searchList)
+    }
 
 
 //    private fun getUserData() {
