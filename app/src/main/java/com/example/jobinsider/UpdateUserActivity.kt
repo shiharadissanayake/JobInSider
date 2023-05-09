@@ -42,24 +42,14 @@ class UpdateUserActivity : AppCompatActivity() {
     private fun update_user() {
         val currentUser = auth.currentUser
         if(currentUser != null){
-            val newemail = nameEditText.text.toString().trim()
-            val newPassword = passwordEditText.text.toString().trim()
+            val newusername = nameEditText.text.toString().trim()
+            val newphonenumber = passwordEditText.text.toString().trim()
 
-            if(newemail.isEmpty()){
-                nameEditText.error = "Email is required"
-                nameEditText.requestFocus()
-                return
-            }
 
-            if(newPassword.isEmpty()){
-                passwordEditText.error = "Password is required"
-                passwordEditText.requestFocus()
-                return
-            }
 
             val userUpdates = HashMap<String, Any>()
-            userUpdates["email"] = newemail
-            userUpdates["password"] = newPassword
+            userUpdates["username"] = newusername
+            userUpdates["phone"] = newphonenumber
 
 
 

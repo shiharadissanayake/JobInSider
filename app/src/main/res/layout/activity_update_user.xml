@@ -38,7 +38,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="36dp"
 
-        android:hint="New Email"
+        android:hint="New UserName"
         android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +50,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
 
-        android:hint="New UserName"
+        android:hint="New Phone Number"
         android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
