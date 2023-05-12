@@ -1,56 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/recCard"
-    android:layout_marginStart="12dp"
-    android:layout_marginEnd="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginHorizontal="10dp"
     android:layout_marginVertical="10dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    app:cardBackgroundColor="@color/navmenu"
     app:cardCornerRadius="20dp"
     app:cardElevation="8dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="109dp"
+        android:backgroundTint="@color/navmenu">
 
 
         <TextView
+            android:id="@+id/jptitle"
             android:layout_width="120dp"
             android:layout_height="30dp"
-            android:id="@+id/jptitle"
-            android:text="Title"
-
-            android:textSize="20sp"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
-            />
 
-        <TextView
-            android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:id="@+id/jpdesc"
-            android:text="priority"
-            android:layout_toEndOf="@id/jptitle"
             android:layout_marginTop="20dp"
-            android:layout_marginStart="90dp"
-            android:textAlignment="center"
-
-            android:textSize="16sp"/>
+            android:text="Title"
+            android:textSize="20sp" />
 
         <TextView
+            android:id="@+id/jpdesc"
+            android:layout_width="143dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/jptitle"
+            android:text="Priority"
+            android:textAlignment="textStart"
+
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/jpcompanyname"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
-            android:id="@+id/jpcompanyname"
-            android:text="desc"
-
-            android:textSize="14sp"
-
             android:layout_below="@id/jptitle"
+
             android:layout_marginStart="20dp"
+
+            android:layout_marginBottom="12dp"
             android:maxLines="1"
-            android:layout_marginBottom="12dp"/>
+            android:text="Description"
+            android:textSize="14sp" />
 
     </RelativeLayout>
 

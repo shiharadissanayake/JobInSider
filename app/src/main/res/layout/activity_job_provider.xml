@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JobProvider">
+    tools:context=".JobProvider"
+    android:background="@drawable/formbg">
 
     <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"
@@ -22,31 +23,36 @@
         />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="10dp"
+        android:id="@+id/recyclerView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recyclerView1"
         android:layout_below="@id/search"
-        android:scrollbars="vertical"/>
+        android:layout_marginTop="77dp"
+        android:scrollbars="vertical" />
 
     <Button
         android:id="@+id/updateJobButton"
-        android:layout_width="120dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="100dp"
-        android:text="Update"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
         android:layout_alignParentRight="true"
-        android:textSize="18sp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="100dp"
+        android:backgroundTint="@color/btnColor"
+        android:text="Update"
+        android:textColor="@color/white"
+        android:textSize="14sp"
         app:cornerRadius="30dp" />
 
     <Button
         android:id="@+id/deleteJobButton"
-        android:layout_width="120dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="180dp"
-        android:text="Delete"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
         android:layout_alignParentRight="true"
-        android:textSize="18sp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/buttonred"
+        android:text="Delete"
+        android:textSize="14sp"
         app:cornerRadius="30dp"
         tools:ignore="MissingConstraints" />
 
@@ -54,12 +60,16 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="Add Job"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_margin="40dp"
-        app:tint = "@color/white"
-        android:src="@drawable/baseline_add_24" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="Add Job"
+        android:src="@drawable/baseline_add_24"
+        app:backgroundTint="@color/btnColor"
+        app:tint="@color/white" />
 
 
 

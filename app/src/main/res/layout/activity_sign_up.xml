@@ -92,7 +92,7 @@
         android:layout_width="163dp"
         android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="-20dp"
+        android:layout_marginTop="250dp"
         android:background="@drawable/roundbtn"
         android:backgroundTint="@color/btnColor"
         android:text="Sign Up"
@@ -101,8 +101,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_confirm"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.762" />
 
     <TextView
@@ -110,7 +110,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="80dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
         android:padding="8dp"
         android:text="Already an user? Login"
         android:textSize="18sp"
@@ -138,7 +139,7 @@
         android:id="@+id/imageView4"
         android:layout_width="291dp"
         android:layout_height="151dp"
-        android:layout_marginBottom="550dp"
+        android:layout_marginBottom="500dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.416"

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_marginTop="16dp"
-    android:layout_marginStart="16dp"
-    android:background="@color/insidepageBgblue">
+    android:layout_marginStart="3dp"
+    android:layout_marginTop="0dp"
+    android:background="@color/navmenu"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/user_name"
         android:layout_width="401dp"
         android:layout_height="73dp"
+        android:layout_marginTop="5dp"
         android:paddingTop="8dp"
         android:text="Shihara Dissanayake"
         android:textColor="@color/white"
@@ -23,11 +24,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="user@gmail.com"
-        android:textSize="16dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textSize="16dp" />
 
-
-
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="-100dp"
+        app:srcCompat="@drawable/logo" />
 
 
 </LinearLayout>

@@ -32,7 +32,7 @@ class UpdateUserActivity : AppCompatActivity() {
 
         nameEditText = findViewById(R.id.edit_text_new_email)
         passwordEditText = findViewById(R.id.edit_text_new_password)
-//        saveButton = findViewById(R.id.button_update)
+        saveButton = findViewById(R.id.updateBtn)
 
         saveButton.setOnClickListener{
             update_user()
