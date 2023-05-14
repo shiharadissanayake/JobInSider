@@ -54,6 +54,18 @@
             android:name=".JobProvider"
             android:exported="false" />
         <activity
+            android:name=".update_reservation"
+            android:exported="false" />
+        <activity
+            android:name=".activity_one_item_resevation"
+            android:exported="false" />
+        <activity
+            android:name=".reserve_list"
+            android:exported="false" />
+        <activity
+            android:name=".job_reservation"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/SplashScreenTheme">

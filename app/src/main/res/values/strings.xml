@@ -46,4 +46,18 @@
     <string name="deletejobbutton">Delete</string>
     <string name="alreadyuserloginsignup">Already an User? Login</string>
     <string name="signuppagetxt">Sign up or login to see our top picks for you</string>
+
+    <string-array name="user_type_entries">
+        <item>Select Job Provider</item>
+        <item>IFS Sri Lanka</item>
+        <item>99x Technology</item>
+        <item>MillenniumIT ESP</item>
+        <item>Virtusa Corporation</item>
+        <item>Wavenet International</item>
+        <item>99X Services</item>
+        <item>HCL Technologies Sri Lanka</item>
+        <item>HSBC Electronic Data Processing (Lanka) Pvt Ltd</item>
+        <item>WSO2 Lanka (Pvt) Ltd</item>
+        <item>99x</item>
+    </string-array>
 </resources>

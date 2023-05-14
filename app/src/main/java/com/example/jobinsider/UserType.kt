@@ -34,6 +34,13 @@ class UserType : AppCompatActivity() {
 
         }
 
+        binding.reserveguide.setOnClickListener {
+
+            val intent = Intent(this, job_reservation::class.java)
+            startActivity(intent)
+
+        }
+
 
     }
 }
