@@ -23,7 +23,7 @@ class MyAdapter(private val context: Context, private var dataList: List<DataCla
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
-        holder.recTitle.text = dataList[position].fulllname
+        holder.recTitle.text = dataList[position].jobposition
         holder.recDesc.text = dataList[position].time
         holder.recPriority.text = dataList[position].town
 

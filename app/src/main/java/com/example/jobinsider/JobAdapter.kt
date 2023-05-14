@@ -23,8 +23,8 @@ class JobAdapter(private val context: Context, private var dataList: List<JobDat
     override fun onBindViewHolder(holder: JobViewHolder, position: Int) {
 
         holder.recTitle.text = dataList[position].jobtitle
-        holder.recDesc.text = dataList[position].companyname
-        holder.recPriority.text = dataList[position].jobdesc
+        holder.recDesc.text = dataList[position].jobdesc
+        holder.recPriority.text = dataList[position].companyname
 
 
 
