@@ -31,6 +31,7 @@ class SignUp : AppCompatActivity() {
             val email = binding.signupEmail.text.toString()
             val password = binding.signupPassword.text.toString()
             val confirmPassword = binding.signupConfirm.text.toString()
+            val phoneno = binding.signupPhoneno.text.toString()
 
             val currentUser = firebaseAuth.currentUser
 
@@ -59,15 +60,17 @@ class SignUp : AppCompatActivity() {
 
 
                 val username = binding.signupName.text.toString()
-                val email = binding.signupEmail.text.toString()
+
+                val phoneno = binding.signupPhoneno.text.toString()
 
 
                 database = FirebaseDatabase.getInstance().getReference("Users")
-                val user= UserData(username,email)
+                val user= UserData(username,phoneno)
                 database.child(currentUser.uid).setValue(user).addOnSuccessListener {
 
                     binding.signupName.text.clear()
-                    binding.signupEmail.text.clear()
+
+                    binding.signupPhoneno.text.clear()
 
                     Toast.makeText(this,"Successfully Saved", Toast.LENGTH_SHORT).show()
 
