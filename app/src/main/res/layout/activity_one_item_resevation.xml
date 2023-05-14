@@ -1,0 +1,97 @@
+<!-- single_item_layout.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="50dp"
+    android:orientation="horizontal">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/lbl_provider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Job Provider"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lbl_appointment_Date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Appointment Date"
+            android:textColor="#555"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/lbl_appointment_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Appointment Time"
+            android:textColor="#555"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/lbl_remaining_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remaining Time"
+            android:textColor="#555"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="16dp">
+
+            <Button
+                android:id="@+id/editBtn"
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/teal_200"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:text="Edit" />
+
+            <Button
+                android:id="@+id/deleteBtn"
+                android:layout_width="94dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/buttonred"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:text="Delete" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="#ECECEC" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

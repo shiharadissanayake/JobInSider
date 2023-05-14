@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:background="@color/btnColor"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/scrollview_border">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="101dp">
+            <Button
+                android:id="@+id/view_list_btn"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:backgroundTint="@color/teal_200"
+                android:paddingStart="16dp"
+                android:paddingEnd="20dp"
+                android:text="View Reserve"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="35dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="RESERVE GUIDER"
+                    android:textFontWeight="800"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Full Name"
+                    android:textSize="15sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="7dp">
+
+                    <EditText
+                        android:id="@+id/txtFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/spinner_style"
+                        android:hint="full name"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Telephone Number"
+                    android:textSize="15sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="7dp">
+
+                    <EditText
+                        android:id="@+id/txtTel"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/spinner_style"
+                        android:hint="telephone"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Date"
+                    android:textSize="15sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="7dp">
+
+                    <EditText
+                        android:id="@+id/txtDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:hint="date"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:inputType="none"
+                        android:textCursorDrawable="@null"
+                        android:background="@drawable/spinner_style"
+                        android:padding="10dp"
+                        />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Time"
+                    android:textSize="15sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="7dp">
+
+                    <EditText
+                        android:id="@+id/txtTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:hint="time"
+                        android:inputType="none"
+                        android:background="@drawable/spinner_style" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Job Provider"
+                    android:textSize="15sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="7dp">
+
+                    <Spinner
+                        android:id="@+id/spinnerJobProvider"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/spinner_style"
+                        android:entries="@array/user_type_entries" />
+
+
+                </FrameLayout>
+
+
+                <Button
+                    android:id="@+id/btnReserve"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/btnshape"
+                    android:letterSpacing="0.1"
+                    android:text="RESERVE"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
